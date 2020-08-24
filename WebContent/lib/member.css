@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+.border-style {
+	border: 1px solid black;
+}
+
+.flex-style {
+	display: flex;
+	justify-content: center;
+	margin: 20px;
+}
+
+.login {
+	/* display: flex;
+	justify-content: center; */
+	/* width: 700px;
+	margin: 20px auto; */
+	width: 400px;
+	margin: 200px auto;
+	font-size: 17pt;
+	border: 1px solid black;
+}
+
+.login>p:nth-child(1) {
+	font-size: 44pt;
+}
+
+.login>p:nth-child(2) {
+	font-size: 24pt;
+}
+
+.login form button {
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+#login_f input {
+	height: 25px;
+	font-size: 15pt;
+	margin: 20px;
+}
+
+#login_f button {
+	display: flex;
+	justify-content: center;
+	margin: 20px auto;
+}
+
+.join {
+	width: 700px;
+	height: 600px;
+	margin: 0 auto;
+}
+
+/* .join>p {
+	padding-left: 10px;
+} */
+#join_f fieldset {
+	margin-top: 20px;
+	font-size: 17pt;
+}
+
+#join_f fieldset legend {
+	font-weight: 1000;
+}
+
+#join_f fieldset input {
+	height: 25px;
+	margin-bottom: 5px;
+	font-size: 15pt;
+}
+
+#game_email {
+	width: 250px;
+}
+
+#game_id, #game_password, #game_password__confirm {
+	width: 170px;
+}
+
+#postcode {
+	width: 80px;
+}
+
+#addr {
+	width: 500px;
+}
+
+#child_age {
+	width: 50px;
+}
+
+#join_f button {
+	height: 30px;
+	margin-top: 15px;
+	font-size: 17pt;
+}
+
+#join_f fieldset input[type="button"] {
+	height: 35px;
+}
