@@ -22,7 +22,7 @@ select * from game_member where id=? and password=?
 <c:if test="${sessionScope.id==null }">
 	<script>
 		alert("아이디 또는 비밀번호가 올바르지 않습니다");
-		location.href = "index.jsp?part=member&page=login";
+		location.href = "Start.jsp?part=member&page=login";
 	</script>
 </c:if> 
 <script type="text/javascript">

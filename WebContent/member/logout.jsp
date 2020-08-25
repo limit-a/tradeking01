@@ -5,5 +5,5 @@
 <c:remove var="id" scope="session" />
 
 <script type="text/javascript">
-	location.href = '/shop';
+	location.href = '/tradeking01';
 </script>
