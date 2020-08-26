@@ -14,7 +14,7 @@
 			<input type="button" value="중복 체크" onclick="idDup()"><br>
 			<!--  -->
 			비밀번호 : <input type="password" id="game_password" name="game_password"><br>
-			비밀번호 확인 : <input type="text" id="game_password__confirm" name="game_password__confirm"><br>
+			비밀번호 확인 : <input type="password" id="game_password__confirm" name="game_password__confirm"><br>
 			이메일 : <input type="email" id="game_email" name="game_email"><br>
 		</fieldset>
 		<button type="button" onclick="join_()" id="join_bt">회원가입</button>

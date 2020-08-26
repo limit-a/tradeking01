@@ -6,6 +6,13 @@
 <c:set var="nt" value="<%=new NoticeT()%>" />
 
 <div class="cont__top">
+임시<br>
+임시<br>
+임시<br>
+임시<br>
+
+
+
 	<%-- <div class="cont__intro-img">
 		<img alt="" src="image/intro_img.jpg">
 	</div>

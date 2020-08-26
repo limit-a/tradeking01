@@ -30,7 +30,7 @@
 		<servlet-class>com.center.TradeKingControl</servlet-class>
 		<init-param>
 			<param-name>tradeking_config</param-name>
-			<param-value>D:\code-practice\programming-language\SelfStudyJava\tradeking01\WebContent\WEB-INF\tradeking_prop.properties</param-value>
+			<param-value>C:\Users\USER506-04\Documents\jaehan\tradeking01\WebContent\WEB-INF\tradeking_prop.properties</param-value>
 		</init-param>
 		<load-on-startup>2</load-on-startup>
 	</servlet>

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-<div class="start border-style">
+<div class="welcome border-style">
 	<%-- <jsp:include page="Menu.jsp" /> --%>
 	<h1 class="flex__center">무역의 시대에 오신 것을 환영합니다.</h1>
 	<ul>
@@ -17,8 +17,9 @@
 		<li>미니맵을 확인 하여 각 나라의 항해 경로를 미리 파악해주세요.</li>
 	</ul>
 	<p class="flex__center">그럼 즐거운 항해 되세요.</p>
-	<div class="start__button flex__center">
-		<input type="button" value="시작하기" onclick="location.href='Main.jsp'">
+	<div class="welcome__button flex__center">
+		<input type="button" value="시작하기"
+			onclick="location.href='Main.jsp'">
 		<!--  -->
 		<input type="button" value="불러오기">
 	</div>
