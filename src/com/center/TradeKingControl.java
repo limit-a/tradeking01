@@ -65,7 +65,7 @@ public class TradeKingControl extends HttpServlet {
 		String path = request.getContextPath();
 		String key = uri.substring(path.length() + 1);
 		MainHandler hand = map.get(key);
-		String view = "Start.jsp";
+		String view = "index.jsp";
 
 		try {
 			hand.Action(request, response);
