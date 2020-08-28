@@ -19,7 +19,7 @@
 	<p class="flex__center">그럼 즐거운 항해 되세요.</p>
 	<div class="welcome__button flex__center">
 		<input type="button" value="시작하기"
-			onclick="location.href='Main.jsp'">
+			onclick="location.href='gamemain.do?kind=main'">
 		<!--  -->
 		<input type="button" value="불러오기">
 	</div>
