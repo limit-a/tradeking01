@@ -5,24 +5,29 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+
+import com.country.Country;
+import com.player.PlayerDAO;
 
 public class MemberDAO {
 	private Connection conn;
 	private ResultSet rs;
 	private PreparedStatement ptmt;
+	private PlayerDAO pd = new PlayerDAO();
 
 	public MemberDAO() {
 		try {
 			conn = DriverManager
-					.getConnection("jdbc:apache:commons:dbcp:jaehan");
+					.getConnection("jdbc:apache:commons:dbcp:tradeking");
 		} catch (SQLException e) {
 			System.out.println("MemberDAO 문제");
 			e.printStackTrace();
 		}
 	}
 
-	private int getMaxNum() {
-		String sql = "select Max(num) as m from game_member";
+	private int getMaxNum(String DBTable) {
+		String sql = "select Max(num) as m from " + DBTable;
 		try {
 			ptmt = conn.prepareStatement(sql);
 			rs = ptmt.executeQuery(sql);
@@ -37,7 +42,8 @@ public class MemberDAO {
 	}
 
 	public boolean InsertDB(Member temp) {
-		int num = getMaxNum();
+		
+		int num = getMaxNum("game_member");
 		String sql = "insert into game_member(num, id, password, email) values(?, ?, ?, ?)";
 
 		try {
@@ -48,6 +54,9 @@ public class MemberDAO {
 			ptmt.setString(4, temp.getGameEmail());
 
 			ptmt.executeUpdate();
+			
+			pd.InsertPlayer(temp.getGameId());
+			
 			ptmt.close();
 			return true;
 		} catch (SQLException e) {
@@ -76,4 +85,5 @@ public class MemberDAO {
 		}
 		return false;
 	}
+	
 }
