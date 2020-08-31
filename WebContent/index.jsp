@@ -26,11 +26,11 @@
 </head>
 <body>
 	<header>
-		<div class="login-bar box-center">
+		<div class="login-bar margin-center border-style">
 			<jsp:include page="/head/member.jsp" />
 		</div>
 	</header>
-	<div class="wrap box-center">
+	<div class="wrap margin-center border-style">
 		<div class="content box-center">
 			<c:choose>
 				<c:when test="${part != null}">

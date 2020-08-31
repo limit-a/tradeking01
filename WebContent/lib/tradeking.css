@@ -5,9 +5,8 @@
 	justify-content: center;
 }
 
-.box-center {
+.margin-center {
 	margin: 0 auto;
-	border: 1px solid black;
 }
 
 .border-style {
