@@ -17,17 +17,21 @@ public class MemberHandler implements MainHandler {
 			if (kind.equals("join_save")) {
 				ms.JoinSave(request, response);
 			}
-			if (kind.equals("login")) {
+			else if (kind.equals("login")) {
 				ms.LoginExcute(request, response);
 				kind = null;
 				request.setAttribute("part", null);
+				
 			}
-			if (kind.equals("logout")) {
+			
+			else if (kind.equals("logout")) {
 				request.getSession().removeAttribute("id");
 				kind = null;
 				request.setAttribute("part", null);
 			}
+			System.out.println("bbb");
 			request.setAttribute("page", kind);
+			
 		}
 		return null;
 	}

@@ -27,13 +27,13 @@ public class GameMainHandler implements MainHandler {
 		String kind = request.getParameter("kind");
 
 		request.setAttribute("part", "main");
-		
-		if(openPage.containsKey(kind)) {
+
+		if (openPage.containsKey(kind)) {
 			request.setAttribute("page", openPage.get(kind));
 		} else {
 			request.setAttribute("page", openPage.get("main"));
 		}
-		
+
 		return null;
 	}
 }

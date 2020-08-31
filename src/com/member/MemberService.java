@@ -3,6 +3,7 @@ package com.member;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.player.Player;
 import com.player.PlayerDAO;
 
 public class MemberService {
@@ -29,8 +30,10 @@ public class MemberService {
 		String gamePassword = request.getParameter("game_password");
 
 		if (md.LoginDB(gameId, gamePassword)) {
+			Player data = pd.SelectPlayer(gameId);
+			
 			request.getSession().setAttribute("id", gameId);
-			/* request.getSession().setAttribute("playerId", gameId); */
+			request.getSession().setAttribute("player", data);
 			
 		} else {
 			request.setAttribute("nomatch", "fail");

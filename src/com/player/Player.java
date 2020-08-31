@@ -9,6 +9,20 @@ public class Player {
 	private String product;
 	private int intimacy;
 
+	public Player() {
+	}
+
+	public Player(int num, String id, String shipName, String currentCountry,
+			int gold, String product, int intimacy) {
+		this.num = num;
+		this.id = id;
+		this.shipName = shipName;
+		this.currentCountry = currentCountry;
+		this.gold = gold;
+		this.product = product;
+		this.intimacy = intimacy;
+	}
+
 	public int getNum() {
 		return num;
 	}

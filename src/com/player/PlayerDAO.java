@@ -36,7 +36,7 @@ public class PlayerDAO {
 		}
 		return 1;
 	}
-	
+
 	public boolean InsertPlayer(String id) {
 		int num = getMaxNum();
 		String sql = "insert into game_player(num, id, ship_name, current_country, gold, product, intimacy) values(?, ?, ?, ?, ?, ?, ?)";
@@ -60,21 +60,24 @@ public class PlayerDAO {
 		}
 		return false;
 	}
-	
-	public Player SessionPlayer(String game_id) {
-		String sql = "select * from game_player where id=?";
+
+	public Player SelectPlayer(String game_id) {
+		String sql = "select * from game_player where id='" + game_id + "'";
+		Player temp = null;
 
 		try {
 			ptmt = conn.prepareStatement(sql);
-			ptmt.setString(1, game_id);
-
 			rs = ptmt.executeQuery();
 
 			if (rs.next()) {
-				
+				temp = new Player(rs.getInt("num"), rs.getString("id"),
+						rs.getString("ship_name"),
+						rs.getString("current_country"), rs.getInt("gold"),
+						rs.getString("product"), rs.getInt("intimacy"));
 			}
+			return temp;
 		} catch (SQLException e) {
-			System.out.println("LoginDB 문제");
+			System.out.println("SelectPlayer 문제");
 			e.printStackTrace();
 		}
 		return null;

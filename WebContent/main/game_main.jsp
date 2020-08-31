@@ -1,13 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8" import="com.util.*"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<c:set var="ct" value="<%=new CountryT()%>" />
 
 <div class='main'>
 	<form action="gamemain.do" method="get">
 		<input type="hidden" name="kind" value="main">
 		<jsp:include page="/menu/Menu.jsp" />
-		<div class='country-name'>미국</div>
+		<div class='country-name'>${player.getCurrentCountry() }</div>
 		<div class="main__content">
-			<div class='country-img'></div>
+			<div class='country-img'>
+				<c:forEach var="list" items="${ct.list }">
+					<c:if test="${player.currentCountry.equals(list.countryName) }">
+						<img alt="" src="image/country_image/${list.countryImage }">
+					</c:if>
+				</c:forEach>
+			</div>
 			<div class='left-side'>
 				<div class='store' onclick="location.href='gamemain.do?kind=store'">상점</div>
 				<div class='shiphouse'

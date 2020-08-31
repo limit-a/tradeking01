@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class CountryService {
 	private CountryDAO cd = new CountryDAO();
 
-
 	public String RandomCountry() {
 		ArrayList<Country> list = cd.AllCountrySelect();
 		int randomNum = (int) (Math.random() * list.size()) + 1;
@@ -13,7 +12,6 @@ public class CountryService {
 		String ramdomCountry = temp.getCountryName();
 		
 		return ramdomCountry;
-		/* String gameId = request.getParameter("game_id"); */
 
 	}
 

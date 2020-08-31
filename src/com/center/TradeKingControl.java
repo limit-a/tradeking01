@@ -70,6 +70,7 @@ public class TradeKingControl extends HttpServlet {
 		try {
 			hand.Action(request, response);
 		} catch (Exception e) {
+			e.printStackTrace();
 			System.out.println("핸들러 클래스 action 메소드 오류");
 		}
 
