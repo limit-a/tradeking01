@@ -16,8 +16,7 @@ public class PlayerDAO {
 
 	public PlayerDAO() {
 		try {
-			conn = DriverManager
-					.getConnection("jdbc:apache:commons:dbcp:tradeking");
+			conn = DriverManager.getConnection("jdbc:apache:commons:dbcp:tradeking");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -49,7 +48,7 @@ public class PlayerDAO {
 			ptmt.setString(4, cs.RandomCountry());
 			ptmt.setInt(5, 1000000);
 			ptmt.setString(6, "");
-			ptmt.setInt(7, 0);
+			ptmt.setString(7, "");
 
 			ptmt.executeUpdate();
 			ptmt.close();
@@ -70,11 +69,9 @@ public class PlayerDAO {
 			rs = ptmt.executeQuery();
 
 			if (rs.next()) {
-				temp = new Player(rs.getInt("num"), rs.getString("id"),
-						rs.getString("ship_name"),
-						rs.getString("current_country"), rs.getInt("gold"),
-						rs.getString("product_name"),
-						rs.getInt("product_count"), rs.getInt("intimacy"));
+				temp = new Player(rs.getInt("num"), rs.getString("id"), rs.getString("ship_name"),
+						rs.getString("current_country"), rs.getInt("gold"), rs.getString("product"),
+						rs.getString("intimacy"));
 			}
 			return temp;
 		} catch (SQLException e) {

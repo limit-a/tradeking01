@@ -15,8 +15,8 @@ public class PortHandler implements MainHandler {
 			HttpServletResponse response) {
 		Map<String, String> openPage = new HashMap<String, String>();
 
-		openPage.put("main", "game_main");
-		openPage.put("store", "game_store");
+		openPage.put("select", "port_select_destination");
+		openPage.put("oiling", "port_ship_oiling");
 		openPage.put("shipyard", "game_shipyard");
 		openPage.put("warehouse", "game_warehouse");
 		openPage.put("port", "game_port");
@@ -31,7 +31,7 @@ public class PortHandler implements MainHandler {
 		if (openPage.containsKey(kind)) {
 			request.setAttribute("page", openPage.get(kind));
 		} else {
-			request.setAttribute("page", openPage.get("main"));
+			request.setAttribute("page", openPage.get("select"));
 		}
 
 		return null;
