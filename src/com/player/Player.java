@@ -6,20 +6,22 @@ public class Player {
 	private String shipName;
 	private String currentCountry;
 	private int gold;
-	private String product;
+	private String productName;
+	private int productCount;
 	private int intimacy;
 
 	public Player() {
 	}
 
 	public Player(int num, String id, String shipName, String currentCountry,
-			int gold, String product, int intimacy) {
+			int gold, String productName, int productCount, int intimacy) {
 		this.num = num;
 		this.id = id;
 		this.shipName = shipName;
 		this.currentCountry = currentCountry;
 		this.gold = gold;
-		this.product = product;
+		this.productName = productName;
+		this.productCount = productCount;
 		this.intimacy = intimacy;
 	}
 
@@ -63,12 +65,20 @@ public class Player {
 		this.gold = gold;
 	}
 
-	public String getProduct() {
-		return product;
+	public String getProductName() {
+		return productName;
 	}
 
-	public void setProduct(String product) {
-		this.product = product;
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+	
+	public int getProductCount() {
+		return productCount;
+	}
+
+	public void setProductCount(int productCount) {
+		this.productCount = productCount;
 	}
 
 	public int getIntimacy() {

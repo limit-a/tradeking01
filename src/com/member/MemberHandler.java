@@ -8,7 +8,8 @@ public class MemberHandler implements MainHandler {
 	private MemberService ms = new MemberService();
 
 	@Override
-	public String Action(HttpServletRequest request, HttpServletResponse response) {
+	public String Action(HttpServletRequest request,
+			HttpServletResponse response) {
 		String kind = request.getParameter("kind");
 		request.setAttribute("part", "member");
 		if (kind == null) {
@@ -16,22 +17,16 @@ public class MemberHandler implements MainHandler {
 		} else {
 			if (kind.equals("join_save")) {
 				ms.JoinSave(request, response);
-			}
-			else if (kind.equals("login")) {
+			} else if (kind.equals("login")) {
 				ms.LoginExcute(request, response);
 				kind = null;
 				request.setAttribute("part", null);
-				
-			}
-			
-			else if (kind.equals("logout")) {
+			} else if (kind.equals("logout")) {
 				request.getSession().removeAttribute("id");
 				kind = null;
 				request.setAttribute("part", null);
 			}
-			System.out.println("bbb");
 			request.setAttribute("page", kind);
-			
 		}
 		return null;
 	}

@@ -1,4 +1,4 @@
-package com.shipyard;
+package com.port;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.center.MainHandler;
 
-public class ShipYardHandler implements MainHandler {
+public class PortHandler implements MainHandler {
 
 	@Override
 	public String Action(HttpServletRequest request,

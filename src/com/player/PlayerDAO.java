@@ -73,7 +73,8 @@ public class PlayerDAO {
 				temp = new Player(rs.getInt("num"), rs.getString("id"),
 						rs.getString("ship_name"),
 						rs.getString("current_country"), rs.getInt("gold"),
-						rs.getString("product"), rs.getInt("intimacy"));
+						rs.getString("product_name"),
+						rs.getInt("product_count"), rs.getInt("intimacy"));
 			}
 			return temp;
 		} catch (SQLException e) {
