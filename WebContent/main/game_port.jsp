@@ -9,8 +9,9 @@
 		<jsp:include page="/port/port_menu.jsp" />
 	</div>
 	<div class="port__content">
-		<div class="select-destination">
+	<form action="port.do" method="get">
+		<!-- <div class="select-destination"> -->
 			<jsp:include page="/port/port_select_destination.jsp" />
-		</div>
+		<!-- </div> --></form>
 	</div>
 </div>

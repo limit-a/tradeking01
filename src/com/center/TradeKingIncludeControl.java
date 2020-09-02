@@ -16,17 +16,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class ShopControl
+ * Servlet implementation class TradekingIncludeControl
  */
-@WebServlet("/TradeKingControl")
-public class TradeKingControl extends HttpServlet {
+@WebServlet("/TradekingIncludeControl")
+public class TradeKingIncludeControl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private Map<String, MainHandler> map = new HashMap();
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public TradeKingControl() {
+	public TradeKingIncludeControl() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -35,7 +35,7 @@ public class TradeKingControl extends HttpServlet {
 	 * @see Servlet#init(ServletConfig)
 	 */
 	public void init(ServletConfig config) throws ServletException {
-		String iParam = config.getInitParameter("tradeking_config");
+		String iParam = config.getInitParameter("tradeking_include_config");
 		Properties prop = new Properties();
 
 		try (FileReader fs = new FileReader(iParam)) {
@@ -60,7 +60,7 @@ public class TradeKingControl extends HttpServlet {
 		}
 	}
 
-	protected void Active(HttpServletRequest request,
+	protected void IncludeActive(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		String uri = request.getRequestURI();
 		String path = request.getContextPath();
@@ -77,7 +77,7 @@ public class TradeKingControl extends HttpServlet {
 
 		RequestDispatcher dps = request.getRequestDispatcher(view);
 
-		dps.forward(request, response);
+		dps.include(request, response);
 
 	}
 
@@ -87,7 +87,7 @@ public class TradeKingControl extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		Active(request, response);
+		IncludeActive(request, response);
 	}
 
 	/**
@@ -96,7 +96,7 @@ public class TradeKingControl extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		Active(request, response);
+		IncludeActive(request, response);
 	}
 
 }

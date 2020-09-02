@@ -38,4 +38,17 @@
 		<servlet-name>TradeKingControl</servlet-name>
 		<url-pattern>*.do</url-pattern>
 	</servlet-mapping>
+	<servlet>
+	    <servlet-name>TradeKingIncludeControl</servlet-name>
+	    <servlet-class>com.center.TradeKingIncludeControl</servlet-class>
+	    <init-param>
+	        <param-name>tradeking_include_config</param-name>
+	        <param-value>C:\Users\USER506-04\Documents\jaehan\tradeking01\WebContent\WEB-INF\tradeking_include_prop.properties</param-value>
+	    </init-param>
+	    <load-on-startup>3</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>TradeKingIncludeControl</servlet-name>
+	    <url-pattern>*.ic</url-pattern>
+	</servlet-mapping>
 </web-app>

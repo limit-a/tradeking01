@@ -17,16 +17,13 @@ public class PortHandler implements MainHandler {
 
 		openPage.put("select", "port_select_destination");
 		openPage.put("oiling", "port_ship_oiling");
-		openPage.put("shipyard", "game_shipyard");
-		openPage.put("warehouse", "game_warehouse");
-		openPage.put("port", "game_port");
-		openPage.put("palace", "game_palace");
-		openPage.put("job", "game_job");
-		openPage.put("gamble", "game_gamble");
+		openPage.put("sailing", "port_sailing");
+		openPage.put("pirate", "port_pirate");
+		openPage.put("typhoon", "port_typhoon");
 
 		String kind = request.getParameter("kind");
 
-		request.setAttribute("part", "main");
+		request.setAttribute("part", "port");
 
 		if (openPage.containsKey(kind)) {
 			request.setAttribute("page", openPage.get(kind));
