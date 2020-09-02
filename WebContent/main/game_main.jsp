@@ -2,12 +2,8 @@
 	pageEncoding="UTF-8" import="com.util.*"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<c:set var="kind" value="${kind }" />
 <c:set var="ct" value="<%=new CountryT()%>" />
 
-<c:if test="${kind != main }">
-	<jsp:include page="/menu/Back.jsp" />
-</c:if>
 <jsp:include page="/menu/Menu.jsp" />
 <div class='main'>
 	<form action="gamemain.do" method="get">

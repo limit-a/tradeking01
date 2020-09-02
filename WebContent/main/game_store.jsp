@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 
 <div class="store">
-	<!-- <form action="gamemain.do" method="get"> -->
+	<form action="gamemain.do" method="get">
 	<input type="hidden" name="kind" value="store">
 	<%-- <jsp:include page="/menu/Back.jsp" />
 	<jsp:include page="/menu/Menu.jsp" /> --%>
@@ -24,5 +24,5 @@
 		<b>금액 ???GOLD</b><br> <b>적재량</b><br>
 		<button>팔기</button>
 	</div>
-	<!-- </form> -->
+	</form>
 </div>
