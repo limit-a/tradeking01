@@ -23,7 +23,7 @@
 					onclick="location.href='gamemain.do?kind=shipyard'">조선소</div>
 				<div class='storage'
 					onclick="location.href='gamemain.do?kind=warehouse'">창고</div>
-				<div class='port' onclick="location.href='gamemain.do?kind=port'">항구</div>
+				<div class='port' onclick="location.href='gamemain.do?kind=select'">항구</div>
 			</div>
 			<div class='right-side'>
 				<div class='greathall'

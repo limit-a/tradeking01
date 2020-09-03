@@ -2,8 +2,12 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
+<jsp:include page="/menu/Back.jsp" />
+<jsp:include page="/menu/Menu.jsp" />
+<div class="port__menu">
+	<jsp:include page="/port/port_menu.jsp" />
+</div>
 <div class="select-destination">
-<input type="hidden" name="p_kind" value="select">
 	<c:forEach begin="0" end="7" step="1">
 		<div class="select-destination__name border-style">나라</div>
 		<div class="select-destination__content border-style">
