@@ -13,7 +13,7 @@
 			<div class='country-img'>
 				<c:forEach var="list" items="${ct.list }">
 					<c:if test="${player.currentCountry.equals(list.countryName) }">
-						<img alt="" src="image/country_image/${list.countryImage }">
+						<img height="250" width="400" alt="" src="image/country_image/${list.countryImage }">
 					</c:if>
 				</c:forEach>
 			</div>
