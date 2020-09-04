@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+.cont__top > p {
+	margin: 200px auto;
+	font-size: 100pt;
+}
+
 .flex__center {
 	display: flex;
 	justify-content: center;
@@ -217,6 +222,82 @@
 	position: absolute;
 }
 
+.ship-yard {
+	width: 900px;
+}
+
+.ship-yard>h1 {
+	font-size: 16pt;
+	text-align: center;
+}
+
+.ship-yard__menu {
+	display: flex;
+	margin: 20px 20px 0 40px;
+}
+
+.ship-yard__menu>div {
+	width: 130px;
+	text-align: center;
+	border: 1px solid black;
+}
+
+.ship-yard__content {
+	display: flex;
+	justify-content: center;
+}
+
+.ship-trading {
+	display: grid;
+	grid-template-columns: 80px 250px 80px 250px;
+	grid-template-rows: 80px 80px 80px 80px;
+	margin: 20px;
+}
+
+.ship-trading__name {
+	line-height: 80px;
+	text-align: center;
+}
+
+.ship-trading__content {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
+.upgrade {
+	display: grid;
+	grid-template-columns: 100px 400px 100px;
+	grid-template-rows: 25px 200px 25px;
+	gap: 10px;
+	margin: 50px;
+}
+
+.upgrade>div {
+	text-align: center;
+	border: 1px solid black;
+}
+
+.upgrade>div:nth-child(1) {
+	grid-area: 1/1/2/2;
+}
+
+.upgrade>div:nth-child(2) {
+	grid-area: 1/3/2/4;
+}
+
+.upgrade>div:nth-child(3) {
+	grid-area: 3/1/4/2;
+}
+
+.upgrade>div:nth-child(4) {
+	grid-area: 3/3/4/4;
+}
+
+.upgrade>div:nth-child(5) {
+	grid-area: 2/2/3/3;
+}
+
 .warehouse {
 	width: 1200px;
 	border: 0px;
@@ -269,7 +350,7 @@
 
 .select-destination {
 	display: grid;
-	grid-template-columns: 80px 250px 80px 250px;
+	grid-template-columns: 150px 300px 150px 300px;
 	grid-template-rows: 80px 80px 80px 80px;
 	margin: 20px;
 }
@@ -317,6 +398,39 @@
 	grid-area: 4/1/5/3;
 	width: 100px;
 	margin: 20px auto;
+}
+
+.palace {
+	border: 1px black solid;
+	width: 900px;
+	height: 400px;
+	text-align: center;
+}
+
+.palace .stat {
+	margin-top: 80px;
+	font-weight: bold;
+	font-size: 20pt;
+	margin-bottom: 30px;
+}
+
+.job {
+	border: 1px black solid;
+	width: 900px;
+	height: 400px;
+	text-align: center;
+}
+
+.job table {
+	margin: 50px;
+	margin-top: 70px;
+	width: 800px;
+	border: 1px solid black;
+}
+
+.job th, .job td {
+	border: 1px solid black;
+	padding: 10px;
 }
 
 .foot {

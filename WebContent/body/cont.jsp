@@ -3,11 +3,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
-<div class="cont__top">
-임시<br>
-임시<br>
-임시<br>
-임시<br>
+<div class="cont__top flex__center">
+
+<p>무역왕</p>
 
 
 

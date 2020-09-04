@@ -32,7 +32,7 @@ public class GameMainHandler implements MainHandler {
 		String kind = request.getParameter("kind");
 
 		String pageSplit = openPage.get(kind).split("_")[0];
-
+		
 		if (pageSplit.equals("port")) {
 			request.setAttribute("part", "port");
 		} else {

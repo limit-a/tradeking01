@@ -2,7 +2,6 @@
 	pageEncoding="UTF-8"%>
 
 <div class="login border-style">
-	<p class="flex-style">무역왕</p>
 	<p class="flex-style">Log-in</p>
 	<form action="login.do" method="post" id="login_f">
 		<input type="hidden" name="kind" value="login">

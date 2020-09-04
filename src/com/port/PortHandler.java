@@ -21,12 +21,12 @@ public class PortHandler implements MainHandler {
 		openPage.put("pirate", "port_pirate");
 		openPage.put("typhoon", "port_typhoon");
 
-		String p_kind = request.getParameter("p_kind");
+		String kind = request.getParameter("kind");
 
 		request.setAttribute("port_part", "port");
 
-		if (openPage.containsKey(p_kind)) {
-			request.setAttribute("port_page", openPage.get(p_kind));
+		if (openPage.containsKey(kind)) {
+			request.setAttribute("port_page", openPage.get(kind));
 		} else {
 			request.setAttribute("port_page", openPage.get("select"));
 		}
