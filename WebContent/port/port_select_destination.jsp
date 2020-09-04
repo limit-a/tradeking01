@@ -10,13 +10,9 @@
 	<jsp:include page="/port/port_menu.jsp" />
 </div>
 <div class="select-destination">
-	<c:forEach begin="0" end="7" step="1">
+	<c:forEach var="prc_list" items="${ct.prc }">
 		<div class="select-destination__name border-style">
-			<c:forEach var="prc" items="${ct.prc }">
-				<c:if test="${ct.prc == ct.list.num }">
-
-				</c:if>
-			</c:forEach>
+				${ct.list.get(prc_list).countryName }
 		</div>
 		<div class="select-destination__content border-style">
 			<input type="button" value="선택" onclick="location.href='Move.jsp'">

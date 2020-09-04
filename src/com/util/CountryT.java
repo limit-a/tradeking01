@@ -23,13 +23,21 @@ public class CountryT {
 		this.list = list;
 	}
 
+	public int[] getPrc() {
+		return prc;
+	}
+
+	public void setPrc(int[] prc) {
+		this.prc = prc;
+	}
+
 	public void randomIndex() {
 
-		prc = new int[list.size()];
+		prc = new int[8];
 
 		for (int i = 0; i < prc.length; i++) {
 
-			prc[i] = (int) (Math.random() * list.size()) + 1;
+			prc[i] = (int) (Math.random() * list.size());
 
 			for (int j = 0; j < i; j++) {
 
