@@ -3,6 +3,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <c:set var="ct" value="<%=new CountryT()%>" />
+<c:set var="server"
+	value="http://${pageContext.request.serverName }:8080/tradeking01" />
 
 <jsp:include page="/menu/Back.jsp" />
 <jsp:include page="/menu/Menu.jsp" />
@@ -12,10 +14,9 @@
 <div class="select-destination">
 	<c:forEach var="prc_list" items="${ct.prc }">
 		<div class="select-destination__name border-style">
-				${ct.list.get(prc_list).countryName }
-		</div>
+			${ct.list.get(prc_list).countryName }</div>
 		<div class="select-destination__content border-style">
-			<input type="button" value="선택" onclick="location.href='Move.jsp'">
+			<input type="button" value="선택" onclick="port_select_()">
 		</div>
 	</c:forEach>
 </div>

@@ -29,3 +29,6 @@ function join_() {
 		fm.submit();
 	}
 }
+
+
+
