@@ -53,14 +53,15 @@ public class TradeKingControl extends HttpServlet {
 				Class<?> hClass = Class.forName(value);
 				MainHandler hInst = (MainHandler) hClass.newInstance();
 				map.put(cmd, hInst);
-			} catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
+			} catch (ClassNotFoundException | InstantiationException
+					| IllegalAccessException e) {
 				System.out.println("클래스가 존재하지 않거나 객체 클래스 형식 또는 이름이 잘못");
 			}
 		}
 	}
 
-	protected void Active(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void Active(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
 		String uri = request.getRequestURI();
 		String path = request.getContextPath();
 		String key = uri.substring(path.length() + 1);
@@ -70,19 +71,22 @@ public class TradeKingControl extends HttpServlet {
 		try {
 			hand.Action(request, response);
 		} catch (Exception e) {
+			e.printStackTrace();
 			System.out.println("핸들러 클래스 action 메소드 오류");
 		}
 
 		RequestDispatcher dps = request.getRequestDispatcher(view);
+
 		dps.forward(request, response);
+
 	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
 		Active(request, response);
 	}
 
@@ -90,8 +94,8 @@ public class TradeKingControl extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
 		Active(request, response);
 	}
 

@@ -1,11 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8" import="java.util.Date, com.util.NoticeT"%>
+	pageEncoding="UTF-8" import="java.util.Date"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
-<c:set var="nt" value="<%=new NoticeT()%>" />
+<div class="cont__top flex__center">
 
-<div class="cont__top">
+<p>무역왕</p>
+
+
+
 	<%-- <div class="cont__intro-img">
 		<img alt="" src="image/intro_img.jpg">
 	</div>

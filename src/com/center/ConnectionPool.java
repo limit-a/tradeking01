@@ -40,8 +40,8 @@ public class ConnectionPool extends HttpServlet {
 
 		try {
 
-			String url = "jdbc:oracle:thin:@localhost:1521:orcl";
-			String user = "jaehan";
+			String url = "jdbc:oracle:thin:@175.203.68.186:1521:orcl";
+			String user = "tradeking";
 			String password = "123456";
 			
 			ConnectionFactory conn = new DriverManagerConnectionFactory(url,
@@ -64,7 +64,7 @@ public class ConnectionPool extends HttpServlet {
 			Class.forName("org.apache.commons.dbcp2.PoolingDriver");
 			PoolingDriver driver = (PoolingDriver) DriverManager
 					.getDriver("jdbc:apache:commons:dbcp:");
-			driver.registerPool("jaehan", connpool);
+			driver.registerPool("tradeking", connpool);
 
 		} catch (Exception e) {
 			System.out.println(e);

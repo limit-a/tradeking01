@@ -16,7 +16,8 @@
 <head>
 <meta charset="UTF-8">
 <title>무역왕</title>
-<link rel="stylesheet" type="text/css" href="${server}/lib/tradeking.css">
+<link rel="stylesheet" type="text/css"
+	href="${server}/lib/tradeking.css">
 <c:if test="${part != null }">
 	<link rel="stylesheet" type="text/css"
 		href="${server}/lib/${part }.css">
@@ -25,16 +26,19 @@
 </head>
 <body>
 	<header>
-		<div class="login-bar box-center">
+		<div class="login-bar margin-center border-style">
 			<jsp:include page="/head/member.jsp" />
 		</div>
 	</header>
-	<div class="wrap box-center">
+	<div class="wrap margin-center border-style">
 		<div class="content box-center">
 			<c:choose>
 				<c:when test="${part != null}">
 					<c:set var="path" value="${part }/${pg }.jsp" />
 					<jsp:include page="${path }" />
+				</c:when>
+				<c:when test="${sessionScope.id != null }">
+					<jsp:include page="Welcome.jsp" />
 				</c:when>
 				<c:otherwise>
 					<jsp:include page="/body/cont.jsp" />

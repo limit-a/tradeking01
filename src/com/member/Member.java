@@ -1,10 +1,19 @@
 package com.member;
 
 public class Member {
+	private int num;
 	private String gameId;
 	private String gamePassword;
 	private String gameEmail;
 
+	public int getNum() {
+		return num;
+	}
+
+	public void setNum(int num) {
+		this.num = num;
+	}
+	
 	public String getGameId() {
 		return gameId;
 	}

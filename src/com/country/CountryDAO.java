@@ -1,4 +1,4 @@
-package com.notice;
+package com.country;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -7,40 +7,40 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class NoticeDAO {
+public class CountryDAO {
 	private Connection conn;
 	private ResultSet rs;
 	private PreparedStatement ptmt;
 
-	public NoticeDAO() {
+	public CountryDAO() {
 		try {
 			conn = DriverManager
-					.getConnection("jdbc:apache:commons:dbcp:jaehan");
+					.getConnection("jdbc:apache:commons:dbcp:tradeking");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 	}
 
-	public ArrayList<Notice> AllSelectNotice() {
-		ArrayList<Notice> data = new ArrayList<Notice>();
-
-		String sql = "select * from notice order by num desc";
+	public ArrayList<Country> AllCountrySelect() {
+		ArrayList<Country> data = new ArrayList<Country>();
+		String sql = "select * from country";
 
 		try {
 			ptmt = conn.prepareStatement(sql);
 			rs = ptmt.executeQuery();
 
 			while (rs.next()) {
-				Notice temp = new Notice(rs.getInt("num"),
-						rs.getString("title"), rs.getString("content"),
-						rs.getDate("wdate"), rs.getInt("hit"));
+				Country temp = new Country(rs.getInt("num"),
+						rs.getString("country_name"),
+						rs.getString("country_image"));
 				data.add(temp);
 			}
 			return data;
 		} catch (SQLException e) {
-			System.out.println("Notice 테이블 실패");
+			System.out.println("국가 DB 오류");
 			e.printStackTrace();
 		}
 		return null;
 	}
+	
 }
